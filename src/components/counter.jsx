@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import ImgWork from "./../assets/imgs/work.jpg";
 class Counter extends Component {
   state = {
     count: 0,
-    imageUrl: "https://xxxxx",
+    imageUrl: ImgWork,
     tags: ["tag1", "tag2", "tag3"],
   };
 
@@ -37,6 +38,10 @@ class Counter extends Component {
     // this.state.count++; // 不会奏效
     this.setState({ count: this.state.count + 1 });
   };
+
+  handleIncrement1 = (product) => {
+    console.log(product);
+  };
   render() {
     let classes = this.getBadgeClasses();
     return (
@@ -56,7 +61,14 @@ class Counter extends Component {
         >
           Increment
         </button>
-
+        {/* 传参的另外一种做法 , 直接在里面弄箭头函数，而不是多次来回调用*/}
+        <button
+          onClick={() => this.handleIncrement1("id:1")}
+          style={{ fontSize: 30, marginLeft: 10 }}
+          className="btn btn-secondary btn-sm"
+        >
+          Increment1
+        </button>
         <ul>
           {this.renderTags()}
           {/* 还有一种单独补充if */}
