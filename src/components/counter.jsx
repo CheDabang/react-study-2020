@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ImgWork from "./../assets/imgs/work.jpg";
 class Counter extends Component {
   state = {
-    count: 0,
+    count: this.props.value,
     imageUrl: ImgWork,
     tags: ["tag1", "tag2", "tag3"],
   };
@@ -43,6 +43,7 @@ class Counter extends Component {
     console.log(product);
   };
   render() {
+    console.log("props:", this.props);
     let classes = this.getBadgeClasses();
     return (
       <React.Fragment>

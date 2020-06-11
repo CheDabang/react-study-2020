@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+// import App from "./App";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.css";
 // import Counter from "./components/counter";
-
+import Counters from "./components/counters";
 // 渲染count组件
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -14,9 +14,16 @@ import "bootstrap/dist/css/bootstrap.css";
 //   document.getElementById("root")
 // );
 
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById("root")
+// );
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Counters />
   </React.StrictMode>,
   document.getElementById("root")
 );
